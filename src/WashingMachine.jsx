@@ -56,7 +56,7 @@ export function WashingMachine({ washingMachines, setWashingMachines }) {
     // }]
 
     const getWashingMachines = () => {
-        fetch("http://localhost:4008/washingMachines",
+        fetch("http://olx-backend-seven.vercel.app/washingMachines",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setWashingMachines(dts))
@@ -97,7 +97,7 @@ export function WashingMachineFeatures() {
     const { id } = useParams();
     const [washingMachines, setWashingMachines] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:4008/washingMachines/${id}`)
+        fetch(`http://olx-backend-seven.vercel.app/washingMachines/${id}`)
             .then((data) => data.json())
             .then((dts) => setWashingMachines(dts));
     }, [id]);

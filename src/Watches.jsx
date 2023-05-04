@@ -41,7 +41,7 @@ export function Watches({ watches, setWatches }) {
     //     "type": "tablet"
     // }]
     const getWatches = () => {
-        fetch("http://localhost:4008/watches",
+        fetch("http://olx-backend-seven.vercel.app/watches",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setWatches(dts))
@@ -81,7 +81,7 @@ export function WatchFeatures() {
     const { id } = useParams();
     const [watches, setWatches] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:4008/watches/${id}`)
+        fetch(`http://olx-backend-seven.vercel.app/watches/${id}`)
             .then((data) => data.json())
             .then((dts) => setWatches(dts));
     }, [id]);

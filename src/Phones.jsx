@@ -58,7 +58,7 @@ export function Phones({ phones, setPhones }) {
     // }]
 
     const getPhones = () => {
-        fetch("http://localhost:4008/phones",
+        fetch("http://olx-backend-seven.vercel.app/phones",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setPhones(dts))
@@ -99,7 +99,7 @@ export function PhoneFeatures() {
     const { id } = useParams();
     const [phones, setPhones] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:4008/phones/${id}`)
+        fetch(`http://olx-backend-seven.vercel.app/phones/${id}`)
             .then((data) => data.json())
             .then((dts) => setPhones(dts));
     }, [id]);

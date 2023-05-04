@@ -31,7 +31,7 @@ export function AddWatch() {
         }
     });
     const addData = (newdata) => {
-        fetch("http://localhost:4008/watches",
+        fetch("http://olx-backend-seven.vercel.app/watches",
             {
                 method: "POST",
                 body: JSON.stringify(newdata),

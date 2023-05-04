@@ -99,7 +99,7 @@ export function Cars({ cars, setCars }) {
 
     // }]
     const getCars = () => {
-        fetch("http://localhost:4008/cars",
+        fetch("http://olx-backend-seven.vercel.app/cars",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setCars(dts))
@@ -140,7 +140,7 @@ export function CarFeatures() {
     const { id } = useParams();
     const [cars, setCars] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:4008/cars/${id}`)
+        fetch(`http://olx-backend-seven.vercel.app/cars/${id}`)
             .then((data) => data.json())
             .then((dts) => setCars(dts));
     }, [id]);

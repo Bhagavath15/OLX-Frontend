@@ -79,7 +79,7 @@ export function Bikes({ bikes, setBikes }) {
 
     // }]
     const getBikes = () => {
-        fetch("http://localhost:4008/bikes",
+        fetch("http://olx-backend-seven.vercel.app/bikes",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setBikes(dts))
@@ -120,7 +120,7 @@ export function BikeFeatures() {
     const { id } = useParams();
     const [bikes, setBikes] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:4008/bikes/${id}`)
+        fetch(`http://olx-backend-seven.vercel.app/bikes/${id}`)
             .then((data) => data.json())
             .then((dts) => setBikes(dts));
     }, [id]);
