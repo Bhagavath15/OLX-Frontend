@@ -1,0 +1,420 @@
+body {
+  margin: 0px;
+  background-color: #dcf3d0;
+  /*#beef00; */
+  color: whitesmoke;
+  font: 1.2em Georgia, serif;
+}
+
+/*-----Navigation bar-----*/
+
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: #3d7c47;
+  /* #ff0028; */
+  /*#65CCB8*/
+  display: flex;
+
+  align-items: center
+}
+
+.navbar h2 {
+  margin-right: auto;
+  padding: 10px
+}
+
+.navbar h2:hover {
+  cursor: pointer
+}
+
+.navbar-content {
+  margin-left: 20px
+}
+
+.dropdown {
+  margin-right: 15px;
+
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+
+/*-----Dashboard-----*/
+.dashboard {
+
+  margin: 20px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px
+}
+
+.product-image {
+  height: 200px
+}
+
+/*-----cars-----*/
+.cars {
+  margin: 20px;
+  padding: 50px;
+  color: black
+}
+
+.cars-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between
+}
+
+.car-image {
+  width: 100%;
+  height: 250px
+}
+
+.car-card :hover {
+  cursor: pointer
+}
+
+/*-----car features-----*/
+
+.car-features {
+  margin: 20px;
+  padding: 50px;
+
+}
+
+.car-div {
+  background-color: black;
+  padding: 20px;
+}
+
+.car-profile {
+  margin: auto;
+  min-width: 400px;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.car-description {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px
+}
+
+.carNameCard {
+
+  min-width: 700px;
+  min-height: 150px;
+  line-height: 50px
+}
+
+.carText {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px
+}
+
+.carcardtext {
+  display: flex;
+  flex-direction: column;
+}
+
+.carPriceCard {
+  min-width: 150px;
+  min-height: 100px
+}
+
+/*----=Bikes-----*/
+
+.bike-features {
+  margin: 20px;
+  padding: 50px;
+  display: flex;
+
+}
+
+.bike-div {
+  width: 770px;
+  background-color: black;
+  padding: 20px;
+}
+
+.bike-profile {
+  margin: auto;
+  min-width: 400px;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.bikePriceCard {
+  margin: 10px;
+  padding: 10px
+}
+
+.bikeOwner {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.bike-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+
+/*-----Watches-----*/
+
+.watches {
+  margin: 20px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between
+}
+
+/*-----chat-----*/
+
+.chat {
+  color: black;
+  margin: 20px;
+  padding: 50px;
+
+}
+
+.chatlist {
+  width: 300px;
+  height: 350px;
+  border: 2px solid black;
+  overflow-y: auto;
+  /* background-image: url(https://miro.medium.com/max/1400/1*dP81IJq-tGFxy1rIK3RYsg.png) */
+  background-color: transparent;
+  border-radius: 7%;
+
+}
+
+.chat-form {
+  /* position: fixed; */
+
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.chat-content {
+  padding: 5px;
+  margin-left: 30px;
+
+}
+
+.chat-name {
+  background-color: #65CCB8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+/*-----Ad Post-----*/
+
+.adpost {
+  margin: 20px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black
+}
+
+.adpost table {
+  border-collapse: collapse;
+  min-width: 600px;
+
+}
+
+.adpost th,
+tr,
+td {
+  border: 2px solid gray;
+  padding: 20px;
+  text-align: left
+}
+
+.adpost tbody :hover {
+  cursor: pointer;
+  background-color: gray
+}
+
+/*-----Add Car-----*/
+
+.add-car {
+  margin: 20px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black
+}
+
+.add-car label {
+  opacity: 0.7
+}
+
+.add-content {
+  border: 2px solid black;
+  border-bottom: 0px;
+  padding: 15px;
+}
+
+.add-content h3 {
+  margin: 10px
+}
+
+.add-carcontent {
+  border: 2px solid black;
+  padding: 5px;
+
+}
+
+.add-carform {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.add-cardflex {
+  line-height: 20px;
+  display: flex;
+  width: 100%;
+  flex-direction: column
+}
+
+.add-car Button {
+  margin: 10px;
+  width: 100%
+}
+
+
+/*-----Login Dashboard-----*/
+
+
+.loginform {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.loginfield {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+
+  padding: 80px;
+  gap: 10px;
+  align-content: center;
+
+}
+
+.card .alreadyuser:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: dodgerblue
+}
+
+.login-card {
+  margin: auto
+}
+
+.card .btn {
+  gap: 10px;
+  display: flex;
+  flex-direction: column
+}
+
+/*-----Bottom Navigation-----*/
+
+/*-----Bottom nav-----*/
+.bottom-nav {
+  padding: 20px;
+  width: 100%;
+  height: 80px;
+  background-color: #e4decd;
+  color: black;
+
+}
+
+.bottom-nav img {
+  padding: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.bottom-nav-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px
+}
