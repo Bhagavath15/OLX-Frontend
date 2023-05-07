@@ -372,7 +372,9 @@ td {
 }
 
 .login-card {
-  margin: auto
+  margin: auto;
+  width: 50%;
+  padding: 30px;
 }
 
 .card .btn {
@@ -385,9 +387,9 @@ td {
 
 /*-----Bottom nav-----*/
 .bottom-nav {
-  padding: 20px;
+  /* margin-top: 40px; */
   width: 100%;
-  height: 80px;
+  height: 110px;
   background-color: #e4decd;
   color: black;
 
@@ -400,6 +402,7 @@ td {
 }
 
 .bottom-nav-content {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
