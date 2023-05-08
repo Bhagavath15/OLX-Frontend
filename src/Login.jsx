@@ -42,7 +42,7 @@ export function Login() {
     return (
         <div className="login-card">
 
-            <Card sx={{ mx: 2, height: 300 }} className="card">
+            <Card sx={{ mx: 2, height: 300, maxWidth: 250 }} className="card">
                 <CardContent>
                     <form onSubmit={formik.handleSubmit} className='loginform'>
                         <h2>LOGIN</h2>
@@ -109,7 +109,7 @@ export function Signin() {
     };
     return (
         <div className="login-card">
-            <Card sx={{ mx: 2, height: 250 }} className="card">
+            <Card sx={{ mx: 2, height: 250, maxWidth: 250 }} className="card">
                 <form onSubmit={formik.handleSubmit} className='loginform'>
                     <h2>SIGNUP</h2>
                     <div className='loginfield'>

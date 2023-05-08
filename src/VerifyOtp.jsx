@@ -37,7 +37,7 @@ export function VerifyOtp() {
 
     return (
         <div className="login-card">
-            <Card sx={{ mx: 2, height: 400 }} className="card">
+            <Card sx={{ mx: 2, height: 400, maxWidth: 250 }} className="card">
                 <form onSubmit={handleResetPassword} className="loginfield">
                     <h2><label>OTP</label></h2>
                     <TextField type="text" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />

@@ -37,7 +37,7 @@ export function ForgetPassword() {
     };
     return (
         <div className="login-card">
-            <Card sx={{ mx: 2, height: 250 }} className="card">
+            <Card sx={{ mx: 2, height: 250, maxWidth: 250 }} className="card">
                 <form onSubmit={formik.handleSubmit} className='loginform'>
                     <h2>FORGET PASSWORD</h2>
                     <div className='loginfield'>

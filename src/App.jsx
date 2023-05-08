@@ -96,9 +96,10 @@ function Nav() {
   return (
     <div className="navbar">
       <h2 className="navbar-content" onClick={() => navigate("/dashboard")}>Olx</h2>
-      <Button variant="outlined" color="inherit" onClick={() => navigate("/adpost")}>Sell</Button>
+      <Button sx={{ m: 1 }} variant="outlined" color="inherit" onClick={() => navigate("/adpost")}>Sell</Button>
+      <Button sx={{ m: 1 }} variant="outlined" color="inherit" onClick={() => navigate("/login")}>Login</Button>
       <div class="dropdown">
-        <Button color="inherit"> <PersonSharpIcon /></Button>
+        <Button sx={{ m: 1 }} color="inherit"> <PersonSharpIcon /></Button>
         <div class="dropdown-content">
           <a onClick={handleClick}>Logout</a>
 
