@@ -25,7 +25,7 @@ export function ForgetPassword() {
     });
 
     const UpdateData = (newUpdate) => {
-        console.log(newUpdate)
+        // console.log(newUpdate)
         fetch("http://olx-backend-seven.vercel.app/forget-password/",
             {
                 method: "POST",
