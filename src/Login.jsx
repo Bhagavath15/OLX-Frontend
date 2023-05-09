@@ -109,7 +109,7 @@ export function Signin() {
     };
     return (
         <div className="login-card">
-            <Card sx={{ mx: 2, height: 250, maxWidth: 250 }} className="card">
+            <Card sx={{ mx: 2, height: 250 , maxWidth: 250}} className="card">
                 <form onSubmit={formik.handleSubmit} className='loginform'>
                     <h2>SIGNUP</h2>
                     <div className='loginfield'>
