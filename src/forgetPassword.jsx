@@ -17,7 +17,7 @@ export function ForgetPassword() {
         },
         // validationSchema: formValidationSchema,
         onSubmit: (newUpdate) => {
-            console.log("form value", newUpdate)
+            // console.log("form value", newUpdate)
             UpdateData(newUpdate)
             navigate("/verifyotp")
             console.log("edit")
