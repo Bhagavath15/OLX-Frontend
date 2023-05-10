@@ -32,7 +32,7 @@ export function Login() {
             } else {
                 setformstate("success");
                 const result = await data.json();
-                // console.log("success", result);
+                console.log("success", result);
                 localStorage.setItem("token", result.token);
                 navigate("/dashboard");
             }
@@ -96,7 +96,7 @@ export function Signin() {
     });
 
     const adddata = (newdata) => {
-        // console.log(newdata)
+        console.log(newdata)
 
         fetch("http://olx-backend-seven.vercel.app/signup", {
             method: "POST",
