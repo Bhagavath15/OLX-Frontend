@@ -48,7 +48,7 @@ export function AddCar() {
         }
     });
     const addData = (newdata) => {
-        fetch("http://olx-backend-seven.vercel.app/cars",
+        fetch("https://olx-backend-seven.vercel.app/cars",
             {
                 method: "POST",
                 body: JSON.stringify(newdata),

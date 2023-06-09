@@ -32,7 +32,7 @@ export function AddWashingMachine() {
         }
     });
     const addData = (newdata) => {
-        fetch("http://olx-backend-seven.vercel.app/washingMachines",
+        fetch("https://olx-backend-seven.vercel.app/washingMachines",
             {
                 method: "POST",
                 body: JSON.stringify(newdata),

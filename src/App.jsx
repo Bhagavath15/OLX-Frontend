@@ -153,7 +153,7 @@ function Dashboard({ products, setProducts }) {
   //   }
   // ]
   const getProducts = () => {
-    fetch("http://olx-backend-seven.vercel.app/dashboard",
+    fetch("https://olx-backend-seven.vercel.app/dashboard",
       { method: "GET" })
       .then((data) => data.json())
       .then((dts) => setProducts(dts))

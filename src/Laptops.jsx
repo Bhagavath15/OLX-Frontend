@@ -58,7 +58,7 @@ export function Laptops({ laptops, setLaptops }) {
     // }]
 
     const getLaptops = () => {
-        fetch("http://olx-backend-seven.vercel.app/laptops",
+        fetch("https://olx-backend-seven.vercel.app/laptops",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setLaptops(dts))
@@ -99,7 +99,7 @@ export function LaptopFeatures() {
     const { id } = useParams();
     const [laptops, setLaptops] = useState([])
     useEffect(() => {
-        fetch(`http://olx-backend-seven.vercel.app/laptops/${id}`)
+        fetch(`https://olx-backend-seven.vercel.app/laptops/${id}`)
             .then((data) => data.json())
             .then((dts) => setLaptops(dts));
     }, [id]);

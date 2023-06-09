@@ -33,7 +33,7 @@ export function AddPhone() {
         }
     });
     const addData = (newdata) => {
-        fetch("http://olx-backend-seven.vercel.app/phones",
+        fetch("https://olx-backend-seven.vercel.app/phones",
             {
                 method: "POST",
                 body: JSON.stringify(newdata),

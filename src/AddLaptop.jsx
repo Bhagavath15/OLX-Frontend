@@ -34,7 +34,7 @@ export function AddLaptop() {
         }
     });
     const addData = (newdata) => {
-        fetch("http://olx-backend-seven.vercel.app/laptops",
+        fetch("https://olx-backend-seven.vercel.app/laptops",
             {
                 method: "POST",
                 body: JSON.stringify(newdata),

@@ -40,7 +40,7 @@ export function AddBike() {
         }
     });
     const addData = (newdata) => {
-        fetch("http://olx-backend-seven.vercel.app/bikes",
+        fetch("https://olx-backend-seven.vercel.app/bikes",
             {
                 method: "POST",
                 body: JSON.stringify(newdata),
