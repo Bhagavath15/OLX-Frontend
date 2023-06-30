@@ -119,8 +119,13 @@ function BikeDetail({ bikes, id }) {
 export function BikeFeatures() {
     const { id } = useParams();
     const [bikes, setBikes] = useState([])
+    const token = localStorage.getItem('token');
     useEffect(() => {
-        fetch(`https://olx-backend-seven.vercel.app/bikes/${id}`)
+        fetch(`https://olx-backend-seven.vercel.app/bikes/${id}`, {
+            headers: {
+                'x-auth-token': token,
+            },
+        })
             .then((data) => data.json())
             .then((dts) => setBikes(dts));
     }, [id]);

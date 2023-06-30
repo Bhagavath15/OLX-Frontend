@@ -140,7 +140,12 @@ export function CarFeatures() {
     const { id } = useParams();
     const [cars, setCars] = useState([])
     useEffect(() => {
-        fetch(`https://olx-backend-seven.vercel.app/cars/${id}`)
+        const token = localStorage.getItem('token');
+        fetch(`https://olx-backend-seven.vercel.app/cars/${id}`, {
+            headers: {
+                'x-auth-token': token,
+            },
+        })
             .then((data) => data.json())
             .then((dts) => setCars(dts));
     }, [id]);

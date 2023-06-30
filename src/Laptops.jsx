@@ -98,8 +98,13 @@ function LaptopDetail({ laptops, id }) {
 export function LaptopFeatures() {
     const { id } = useParams();
     const [laptops, setLaptops] = useState([])
+    const token = localStorage.getItem('token');
     useEffect(() => {
-        fetch(`https://olx-backend-seven.vercel.app/laptops/${id}`)
+        fetch(`https://olx-backend-seven.vercel.app/laptops/${id}`, {
+            headers: {
+                'x-auth-token': token,
+            },
+        })
             .then((data) => data.json())
             .then((dts) => setLaptops(dts));
     }, [id]);

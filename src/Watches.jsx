@@ -80,8 +80,13 @@ function WatchDetail({ watches, id }) {
 export function WatchFeatures() {
     const { id } = useParams();
     const [watches, setWatches] = useState([])
+    const token = localStorage.getItem('token');
     useEffect(() => {
-        fetch(`https://olx-backend-seven.vercel.app/watches/${id}`)
+        fetch(`https://olx-backend-seven.vercel.app/watches/${id}`, {
+            headers: {
+                'x-auth-token': token,
+            },
+        })
             .then((data) => data.json())
             .then((dts) => setWatches(dts));
     }, [id]);

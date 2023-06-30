@@ -96,8 +96,13 @@ function WashingMachineDetail({ washingMachines, id }) {
 export function WashingMachineFeatures() {
     const { id } = useParams();
     const [washingMachines, setWashingMachines] = useState([])
+    const token = localStorage.getItem('token');
     useEffect(() => {
-        fetch(`https://olx-backend-seven.vercel.app/washingMachines/${id}`)
+        fetch(`https://olx-backend-seven.vercel.app/washingMachines/${id}`, {
+            headers: {
+                'x-auth-token': token,
+            },
+        })
             .then((data) => data.json())
             .then((dts) => setWashingMachines(dts));
     }, [id]);

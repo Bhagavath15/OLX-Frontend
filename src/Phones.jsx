@@ -98,8 +98,13 @@ function PhoneDetail({ phones, id }) {
 export function PhoneFeatures() {
     const { id } = useParams();
     const [phones, setPhones] = useState([])
+    const token = localStorage.getItem('token');
     useEffect(() => {
-        fetch(`https://olx-backend-seven.vercel.app/phones/${id}`)
+        fetch(`https://olx-backend-seven.vercel.app/phones/${id}`, {
+            headers: {
+                'x-auth-token': token,
+            },
+        })
             .then((data) => data.json())
             .then((dts) => setPhones(dts));
     }, [id]);
