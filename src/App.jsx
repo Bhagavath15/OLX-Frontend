@@ -97,14 +97,18 @@ function Nav() {
     <div className="navbar">
       <h2 className="navbar-content" onClick={() => navigate("/dashboard")}>Olx</h2>
       <Button sx={{ m: 1 }} variant="outlined" color="inherit" onClick={() => navigate("/adpost")}>Sell</Button>
-      <Button sx={{ m: 1 }} variant="outlined" color="inherit" onClick={() => navigate("/login")}>Login</Button>
-      <div class="dropdown">
-        <Button sx={{ m: 1 }} color="inherit"> <PersonSharpIcon /></Button>
-        <div class="dropdown-content">
-          <a onClick={handleClick}>Logout</a>
+      {
+        localStorage.getItem("token") == null ?
+          (<Button sx={{ m: 1 }} variant="outlined" color="inherit" onClick={() => navigate("/login")}>Login</Button>
+          ) : (
+            <div class="dropdown">
+              <Button sx={{ m: 1 }} color="inherit"> <PersonSharpIcon /></Button>
+              <div class="dropdown-content">
+                <a onClick={handleClick}>Logout</a>
 
-        </div>
-      </div>
+              </div>
+            </div>
+          )}
     </div>
   )
 }
