@@ -139,6 +139,7 @@ function CarDetail({ cars, id }) {
 export function CarFeatures() {
     const { id } = useParams();
     const [cars, setCars] = useState([])
+    const navigate = useNavigate()
     useEffect(() => {
         const token = localStorage.getItem('token');
         fetch(`https://olx-backend-seven.vercel.app/cars/${id}`, {
@@ -212,7 +213,7 @@ export function CarFeatures() {
                     <div className="car-price">
                         <Card className="carPriceCard" sx={{ m: 2 }}>
                             <Typography variant="h6" color="text.primary" sx={{ fontSize: 30, m: 2 }}>{cars.price}</Typography>
-                            <Button variant="outlined" color="primary" sx={{ width: 300, m: 3 }}>Chat</Button>
+                            <Button variant="outlined" color="primary" sx={{ width: 300, m: 3 }} onClick={() => navigate("/chat")}>Chat</Button>
                         </Card>
                     </div>
                     <div className="car-price">

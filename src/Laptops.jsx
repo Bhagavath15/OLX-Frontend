@@ -96,6 +96,7 @@ function LaptopDetail({ laptops, id }) {
 
 
 export function LaptopFeatures() {
+    const navigate = useNavigate()
     const { id } = useParams();
     const [laptops, setLaptops] = useState([])
     const token = localStorage.getItem('token');
@@ -154,7 +155,7 @@ export function LaptopFeatures() {
                     sx={{ minWidth: 375, m: 2 }}
                     className="bikeOwner">
                     <Typography variant="h6" sx={{ fontSize: 30, m: 1 }}>{laptops.ownerName}</Typography>
-                    <Button sx={{ width: 375 }} color="primary" variant="outlined">Chat</Button>
+                    <Button sx={{ width: 375 }} color="primary" variant="outlined" onClick={() => navigate("/chat")}>Chat</Button>
                     <Typography sx={{ fontSize: 14, m: 1 }}><CallIcon fontSize="small" />{laptops.phoneNo}</Typography>
 
                 </Card>
